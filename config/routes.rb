@@ -1,5 +1,6 @@
 Photogur::Application.routes.draw do
 
+  post 'pictures' => "pictures#create"
   # Match the HTTP Request GET with the 
   # URL /pictures to the index action in the PicturesController.
   get 'pictures' => 'pictures#index'
@@ -8,11 +9,12 @@ Photogur::Application.routes.draw do
   # get 'pictures/1' => 'pictures#picture1'
   # get 'pictures/2' => 'pictures#picture2'
 
-
+  get 'pictures/new' => 'pictures#new'
   # as: "picture" lets you refer to this route as picture_path, 
   # and because the route requires an ID, you would pass in the 
   # ID of a picture, like this: picture_path(@picture.id).
   get 'pictures/:id' => 'pictures#show', as: "picture"
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
