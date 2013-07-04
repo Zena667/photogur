@@ -1,7 +1,9 @@
 Photogur::Application.routes.draw do
 
+  # Match the HTTP Request GET with the 
+  # URL /pictures to the index action in the PicturesController.
   get 'pictures' => 'pictures#index'
-  
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
