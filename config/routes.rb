@@ -17,6 +17,7 @@ Photogur::Application.routes.draw do
   # ID of a picture, like this: picture_path(@picture.id).
   get 'pictures/:id' => 'pictures#show', as: "picture"
 
+  get 'pictures/:id/edit' => "pictures#edit", as: "edit_picture"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
