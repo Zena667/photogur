@@ -4,6 +4,10 @@ Photogur::Application.routes.draw do
   # URL /pictures to the index action in the PicturesController.
   get 'pictures' => 'pictures#index'
 
+  get 'pictures/0' => 'pictures#picture0'
+  get 'pictures/1' => 'pictures#picture1'
+  get 'pictures/2' => 'pictures#picture2'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
